@@ -13,7 +13,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p04.PhotoGallery", "p04.Pho
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p06.DNASequences", "p06.DNASequences\p06.DNASequences.csproj", "{FDB6182B-19D1-49DF-BBD5-80CA1D0160DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.BPMCounter", "ConsoleApp3\05.BPMCounter.csproj", "{20FCFC99-F6F5-4E67-8DC2-FD5F7FBF456E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p05.BPMCounter", "ConsoleApp3\p05.BPMCounter.csproj", "{20FCFC99-F6F5-4E67-8DC2-FD5F7FBF456E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p07.TrainingHallEquipment", "p07.TrainingHallEquipment\p07.TrainingHallEquipment.csproj", "{51AAB26A-FADC-4BC0-A07C-5D30FDE9A0E1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{20FCFC99-F6F5-4E67-8DC2-FD5F7FBF456E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{20FCFC99-F6F5-4E67-8DC2-FD5F7FBF456E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{20FCFC99-F6F5-4E67-8DC2-FD5F7FBF456E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51AAB26A-FADC-4BC0-A07C-5D30FDE9A0E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51AAB26A-FADC-4BC0-A07C-5D30FDE9A0E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51AAB26A-FADC-4BC0-A07C-5D30FDE9A0E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51AAB26A-FADC-4BC0-A07C-5D30FDE9A0E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
