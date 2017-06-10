@@ -33,7 +33,7 @@ namespace p09.TriangleFormations
                 }
                 else if (b * b + c * c == a * a)
                 {
-                    Console.WriteLine("Triangle has a right angle between sides b and c*c");
+                    Console.WriteLine("Triangle has a right angle between sides b and c");
                 }
                 else
                 {
