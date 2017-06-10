@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p05.BPMCounter", "ConsoleAp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p07.TrainingHallEquipment", "p07.TrainingHallEquipment\p07.TrainingHallEquipment.csproj", "{51AAB26A-FADC-4BC0-A07C-5D30FDE9A0E1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p08.SMSTyping", "p08.SMSTyping\p08.SMSTyping.csproj", "{A817F8BB-14B7-46CD-A956-D18FA3ED89B8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{51AAB26A-FADC-4BC0-A07C-5D30FDE9A0E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{51AAB26A-FADC-4BC0-A07C-5D30FDE9A0E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{51AAB26A-FADC-4BC0-A07C-5D30FDE9A0E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A817F8BB-14B7-46CD-A956-D18FA3ED89B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A817F8BB-14B7-46CD-A956-D18FA3ED89B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A817F8BB-14B7-46CD-A956-D18FA3ED89B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A817F8BB-14B7-46CD-A956-D18FA3ED89B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
