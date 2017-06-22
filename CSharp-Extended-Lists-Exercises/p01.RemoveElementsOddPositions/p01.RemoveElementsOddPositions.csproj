@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AE22E2E2-47B6-45CA-B870-F5228B820A37}</ProjectGuid>
+    <ProjectGuid>{DF167C28-FDCF-472C-BB7B-62FBC282E134}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>p04.Phone</RootNamespace>
-    <AssemblyName>p04.Phone</AssemblyName>
+    <RootNamespace>p01.RemoveElementsOddPositions</RootNamespace>
+    <AssemblyName>p01.RemoveElementsOddPositions</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="p04.Phone.cs" />
+    <Compile Include="p01.RemoveElementsOddPositions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

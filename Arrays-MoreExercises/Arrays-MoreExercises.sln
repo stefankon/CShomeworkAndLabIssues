@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p03.Phonebook", "p03.Phoneb
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p04.Phone", "p04.Phone\p04.Phone.csproj", "{AE22E2E2-47B6-45CA-B870-F5228B820A37}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p05.CharRotation", "p05.CharRotation\p05.CharRotation.csproj", "{B9A4C70E-F0DD-4A86-B90F-6BC205B33DD1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{AE22E2E2-47B6-45CA-B870-F5228B820A37}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AE22E2E2-47B6-45CA-B870-F5228B820A37}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AE22E2E2-47B6-45CA-B870-F5228B820A37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9A4C70E-F0DD-4A86-B90F-6BC205B33DD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9A4C70E-F0DD-4A86-B90F-6BC205B33DD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9A4C70E-F0DD-4A86-B90F-6BC205B33DD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9A4C70E-F0DD-4A86-B90F-6BC205B33DD1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

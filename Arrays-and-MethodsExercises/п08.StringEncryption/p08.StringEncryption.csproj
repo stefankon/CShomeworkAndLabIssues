@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AE22E2E2-47B6-45CA-B870-F5228B820A37}</ProjectGuid>
+    <ProjectGuid>{91E10EC4-4931-4950-A9E9-7C1C33CABE80}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>p04.Phone</RootNamespace>
-    <AssemblyName>p04.Phone</AssemblyName>
+    <RootNamespace>п08.StringEncryption</RootNamespace>
+    <AssemblyName>п08.StringEncryption</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="p04.Phone.cs" />
+    <Compile Include="p08.StringEncryption.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
