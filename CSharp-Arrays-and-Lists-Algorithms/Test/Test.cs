@@ -10,13 +10,35 @@ namespace Test
     {
         static void Main(string[] args)
         {
-            int[] arr = Console.ReadLine().Split(' ')
-                                .Select(int.Parse).ToArray();
+            string[] input = Console.ReadLine().Split(' ');
+            string[] decoded = new string[(input.Length) * 2];
 
-            InsertionSort(arr);
+            int leftCounter = 0;
+            int rightCounter = decoded.Length - 1;
 
-            Console.WriteLine(String.Join(" ", arr));
+            for (int cnt1 = 0; cnt1 < input.Length; cnt1++)
+            {
+                int[] temp = input[cnt1].Split('.').Select(int.Parse).ToArray();
+                char leftNum = Convert.ToChar(temp[0]);
+                char rightNum = Convert.ToChar(temp[1]);
+
+                if (temp[0] != 0)
+                {
+                    decoded[leftCounter] = leftNum.ToString();
+                }
+                if (temp[1] != 0)
+                {
+                    decoded[rightCounter] = rightNum.ToString();
+                }
+
+                leftCounter++;
+                rightCounter--;
+            }
+
+            Console.WriteLine(string.Join("", decoded));
+
         }
+        /* Methods */
 
         static void InsertionSort(int[] arr)
         {
@@ -48,7 +70,7 @@ namespace Test
                     }
                 }
             }
-            
+
         }
         static void Swap(ref int first, ref int second)
         {
