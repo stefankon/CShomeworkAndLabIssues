@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p02.BinarySearch", "p02.BinarySearch\p02.BinarySearch.csproj", "{2365131A-CE0F-478E-9319-22747365A9B2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p03.MirrorImage", "ConsoleApp1\p03.MirrorImage.csproj", "{79D478BD-D090-48CB-BDC8-54D1D15B0397}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p04.JapaneseRoulette", "p04.JapaneseRoulette\p04.JapaneseRoulette.csproj", "{7EE2ADE0-8E36-4258-B19F-2DFACDBC9F7F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{2365131A-CE0F-478E-9319-22747365A9B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2365131A-CE0F-478E-9319-22747365A9B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2365131A-CE0F-478E-9319-22747365A9B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79D478BD-D090-48CB-BDC8-54D1D15B0397}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79D478BD-D090-48CB-BDC8-54D1D15B0397}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79D478BD-D090-48CB-BDC8-54D1D15B0397}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79D478BD-D090-48CB-BDC8-54D1D15B0397}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EE2ADE0-8E36-4258-B19F-2DFACDBC9F7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EE2ADE0-8E36-4258-B19F-2DFACDBC9F7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EE2ADE0-8E36-4258-B19F-2DFACDBC9F7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EE2ADE0-8E36-4258-B19F-2DFACDBC9F7F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
