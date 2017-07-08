@@ -16,12 +16,14 @@ namespace p04.JapaneseRoulette
             int startPosition = 0;
             int playerTurns = 0;
             bool isPlayrDead = false;
+            int temp = 0;
 
             for (int i = 0; i < cylinder.Length; i++)
             {
                 if (cylinder[i] == 1)
                 {
                     startPosition = i;
+                    break;
                 }
             }
 
@@ -31,15 +33,37 @@ namespace p04.JapaneseRoulette
                 playerTurns = int.Parse(individualPlayer[0]);
                 string direction = individualPlayer[1];
 
-                if (direction == "Right")
+                switch (direction)
                 {
-                   
+                    case "Right":
+                        startPosition = ((startPosition + playerTurns) % cylinder.Length);
+                        temp = startPosition;
+                        break;
+                    case "Left":
+                        if (startPosition - playerTurns < 0)
+                        {
+                            startPosition = cylinder.Length - (Math.Abs((startPosition - playerTurns) % cylinder.Length));
+                        }
+                        else
+                        {
+                            startPosition = startPosition - playerTurns;
+                        }
+                        
+                        break;
                 }
+                if (startPosition == 2)
+                {
+                    Console.WriteLine($"Game over! Player {i} is dead.");
+                    isPlayrDead = true;
+                    break;
+                }
+
+                startPosition = startPosition + 1 == cylinder.Length ? 0 : startPosition + 1;
             }
-
-
-            Console.WriteLine(startPosition);
-            //Console.WriteLine(string.Join("-*-", players));
-        }   
+            if (!isPlayrDead)
+            {
+                Console.WriteLine("Everybody got lucky!");
+            }
+        }
     }
 }
