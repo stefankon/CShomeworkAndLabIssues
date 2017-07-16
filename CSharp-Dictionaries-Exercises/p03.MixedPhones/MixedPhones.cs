@@ -13,8 +13,6 @@ namespace p03.MixedPhones
             string inputLine = Console.ReadLine();
             SortedDictionary<string, long> phoneBook = new SortedDictionary<string, long>();
 
-            string phoneName = "";
-            int phoneNumber = 0;
             while (inputLine != "Over")
             {
 

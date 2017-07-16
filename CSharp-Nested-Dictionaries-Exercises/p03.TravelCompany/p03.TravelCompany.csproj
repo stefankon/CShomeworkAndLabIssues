@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9142C649-5C2C-46CA-BAB1-FDF9A11A41C0}</ProjectGuid>
+    <ProjectGuid>{B2970C50-18E8-4065-AD93-8D605AE1B8E1}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ConsoleApp2</RootNamespace>
-    <AssemblyName>ConsoleApp2</AssemblyName>
+    <RootNamespace>p03.TravelCompany</RootNamespace>
+    <AssemblyName>p03.TravelCompany</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,10 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\p04.ExamShopping\ExamShopping.cs">
-      <Link>ExamShopping.cs</Link>
-    </Compile>
-    <Compile Include="LetterRepetition.cs" />
+    <Compile Include="TravelCompany.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
