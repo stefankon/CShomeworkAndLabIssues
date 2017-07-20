@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p03.ShoppingSpree", "p03.Sh
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p04.SoftUniBeerPong", "p04.SoftUniBeerPong\p04.SoftUniBeerPong.csproj", "{90767529-4CD6-4C8F-9867-41D652D244B7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p05.FlattenDictionary", "p05.FlattenDictionary\p05.FlattenDictionary.csproj", "{550675F7-D498-43F8-A20D-3F39E5F65704}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{90767529-4CD6-4C8F-9867-41D652D244B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{90767529-4CD6-4C8F-9867-41D652D244B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{90767529-4CD6-4C8F-9867-41D652D244B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{550675F7-D498-43F8-A20D-3F39E5F65704}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{550675F7-D498-43F8-A20D-3F39E5F65704}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{550675F7-D498-43F8-A20D-3F39E5F65704}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{550675F7-D498-43F8-A20D-3F39E5F65704}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

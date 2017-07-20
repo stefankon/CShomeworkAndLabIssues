@@ -11,20 +11,45 @@ namespace p04.SoftUniBeerPong
         static void Main(string[] args)
         {
             string input = Console.ReadLine();
-            List<BeerTeams> dataCompetition = new List<BeerTeams>();
-            Dictionary<string, int> teamCount = new Dictionary<string, int>();
+
+            Dictionary<string, Dictionary<string, int>> dataTeams = new Dictionary<string, Dictionary<string, int>>();
 
             while (input != "stop the game")
             {
                 BeerTeams inputIlne = BeerTeams.ParseTokens(input);
-                if (true)
+                if (!dataTeams.ContainsKey(inputIlne.Team))
                 {
-
+                    dataTeams.Add(inputIlne.Team, new Dictionary<string, int>());
                 }
-                dataCompetition.Add(inputIlne);
+
+                if (dataTeams[inputIlne.Team].Count < 3)
+                {
+                    dataTeams[inputIlne.Team].Add(inputIlne.Player, inputIlne.PointsMade);
+                }
 
                 input = Console.ReadLine();
             }
+
+            var listInOrder = dataTeams
+                              .Where(x => x.Value.Count == 3)
+                              .OrderByDescending(x => x.Value.Sum(score => score.Value));
+
+            int numOrder = 1;
+
+            foreach (var kvp1 in listInOrder)
+            {
+                Dictionary<string, int> playersRancing = kvp1.Value;
+                var playersOrdred = playersRancing.OrderByDescending(x => x.Value);
+
+                Console.WriteLine($"{numOrder}. {kvp1.Key}; Players:");
+                foreach (var kvp2 in playersOrdred)
+                {
+                    Console.WriteLine($"###{kvp2.Key}: {kvp2.Value}");
+                }
+                numOrder++;
+
+            }
+
         }
     }
     class BeerTeams

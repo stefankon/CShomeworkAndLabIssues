@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{90767529-4CD6-4C8F-9867-41D652D244B7}</ProjectGuid>
+    <ProjectGuid>{550675F7-D498-43F8-A20D-3F39E5F65704}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>p04.SoftUniBeerPong</RootNamespace>
-    <AssemblyName>p04.SoftUniBeerPong</AssemblyName>
+    <RootNamespace>p05.FlattenDictionary</RootNamespace>
+    <AssemblyName>p05.FlattenDictionary</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SoftUniBeerPong.cs" />
+    <Compile Include="FlattenDictionary.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
