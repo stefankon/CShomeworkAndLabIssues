@@ -8,82 +8,90 @@ namespace Test
 {
     class Test
     {
-        static Dictionary<string, Dictionary<string, int>> data =
-           new Dictionary<string, Dictionary<string, int>>();
+
         static void Main()
         {
-            StoreTravelData();
-            ProcessAccommodations();
+            var data =
+                 new Dictionary<string, HashSet<string>>();
+
+            string[] inputTokens =
+                ParseInputTokens(Console.ReadLine());
+
+            while (inputTokens[0] != "filter")
+            {
+                string topic = inputTokens[0];
+                string[] tags = ParseTags(inputTokens[1]);
+
+                StoreTags(data, topic, tags);
+
+                inputTokens = ParseInputTokens(Console.ReadLine());
+            }
+
+            string[] filteredTags = ParseTags(Console.ReadLine());
+            PrintTopicsByFilteredTags(data, filteredTags);
         }
 
-        static void StoreTravelData()
+        static string[] ParseInputTokens(string input)
         {
-            string[] inputTokens = Console.ReadLine().Split(':');
-            while (inputTokens[0] != "ready")
+            return input
+                .Split(new string[] { " -> " },
+                       StringSplitOptions.RemoveEmptyEntries);
+        }
+
+        static string[] ParseTags(string input)
+        {
+            return input
+                .Split(new string[] { ", " },
+                       StringSplitOptions.RemoveEmptyEntries);
+        }
+
+        static void StoreTags(
+            Dictionary<string, HashSet<string>> data,
+            string topic,
+            string[] tags)
+        {
+            if (!data.ContainsKey(topic))
             {
-                string city = inputTokens[0];
-                string busesData = inputTokens[1];
+                data.Add(topic, new HashSet<string>());
+            }
 
-                StoreBusesData(city, busesData);
-
-                inputTokens = Console.ReadLine().Split(':');
+            foreach (var tag in tags)
+            {
+                data[topic].Add(tag);
             }
         }
 
-        static void StoreBusesData(string city, string input)
+        static void PrintTopicsByFilteredTags(
+            Dictionary<string, HashSet<string>> data,
+            string[] filteredTags)
         {
-            string[] busesData = input.Split(',');
-            foreach (var busData in busesData)
+            foreach (var topicData in data)
             {
-                string[] busDataTokens = busData.Split('-');
-
-                string bus = busDataTokens[0];
-                int capacity = int.Parse(busDataTokens[1]);
-
-                if (!data.ContainsKey(city))
+                string topic = topicData.Key;
+                HashSet<string> tags = topicData.Value;
+                if (ContainsAllTags(tags, filteredTags))
                 {
-                    data.Add(city, new Dictionary<string, int>());
+                    var hashtaggedTags = tags.Select(t => "#" + t);
+                    Console.WriteLine("{0} | {1}",
+                        topic,
+                        string.Join(", ", hashtaggedTags));
                 }
-
-                data[city][bus] = capacity;
             }
         }
 
-        static void ProcessAccommodations()
+        static bool ContainsAllTags(
+            HashSet<string> tags,
+            string[] filteredTags)
         {
-            string[] inputTokens = Console.ReadLine().Split(' ');
-            while (inputTokens[0] != "travel")
+            foreach (var ft in filteredTags)
             {
-                string destination = inputTokens[0];
-                int passengers = int.Parse(inputTokens[1]);
-                Dictionary<string, int> busesData = data[destination];
-
-                ProcessCurrentAccomodation(busesData, destination, passengers);
-
-                inputTokens = Console.ReadLine().Split(' ');
+                if (!tags.Contains(ft))
+                {
+                    return false;
+                }
             }
-        }
 
-        static void ProcessCurrentAccomodation(
-            Dictionary<string, int> busesData,
-            string destination,
-            int passengers)
-        {
-            int availableAccomodation =
-                    busesData.Select(kvp => kvp.Value).Sum();
-
-            if (availableAccomodation >= passengers)
-            {
-                Console.WriteLine("{0} -> all {1} accommodated",
-                    destination,
-                    passengers);
-            }
-            else
-            {
-                Console.WriteLine("{0} -> all except {1} accommodated",
-                    destination,
-                    passengers - availableAccomodation);
-            }
+            return true;
         }
     }
 }
