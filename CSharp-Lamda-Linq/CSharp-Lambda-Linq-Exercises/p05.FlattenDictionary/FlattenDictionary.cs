@@ -19,52 +19,51 @@ namespace p05.FlattenDictionary
             {
                 DataStore input = DataStore.ParseTokens(inputLine);
 
-                if (!data.ContainsKey(input.Type) && !data.ContainsKey("flatten"))
+                if (input.Type != "flatten")
                 {
-                    data.Add(input.Type, new Dictionary<string, string>());
+                    if (!data.ContainsKey(input.Type))
+                    {
+                        data.Add(input.Type, new Dictionary<string, string>());
+                    }
+                    data[input.Type][input.Mark] = input.Model;
                 }
-                if (!data[input.Type].ContainsKey(input.Mark))
-                {
-                    data[input.Type].Add(input.Mark, input.Model);
-                }
-                if (data.ContainsKey("flatten"))
+                else
                 {
                     var newType = input.Mark;
-                    while (inputLine != "end")
-                    {
-                        inputLine = Console.ReadLine();
-                        var concat = input.Mark + input.Model + "";
-                        var emptyStr = input.Mark;
-                        if (data.ContainsKey(newType))
-                        {
-                            if (data.ContainsKey(newType))
-                            {
-                                data[newType] = new Dictionary<string, string>();
-                                if (!data[newType].ContainsKey(concat))
-                                {
-                                    data[newType].Add(concat, emptyStr);
-                                }
-                            }
-                        }
-                        if (inputLine == "end")
-                        {
-                            return;
-                        }
-                    }
+                    data[newType] =
+                        data[newType].ToDictionary(x => x.Key + x.Value, x => "flat");
                 }
 
                 inputLine = Console.ReadLine();
-
-
             }
-            foreach (var item in data)
+            var orderedData = data
+                .OrderByDescending(r => r.Key.Length)
+                .ToDictionary(r => r.Key, r => r.Value);
+
+            foreach (var kvp1 in orderedData)
             {
-                Console.WriteLine($"{item.Key}:");
-                foreach (var item2 in item.Value)
+                var key = kvp1.Key;
+                var innerKey = kvp1.Value;
+                Console.WriteLine(key);
+                var notFlat = innerKey.Where(x => x.Value != "flat").OrderBy(x => x.Key.Length);
+
+                var isFlat = innerKey.Where(x => x.Value == "flat");
+
+                int counter = 1;
+                foreach (var kvp2 in notFlat)
                 {
-                    Console.WriteLine($"{item2.Key} >>> {item2.Value}");
+                    Console.WriteLine($"{counter}. {kvp2.Key} - {kvp2.Value}");
+                    counter++;
+                }
+                foreach (var kvp3 in isFlat)
+                {
+                    Console.WriteLine($"{counter}. {kvp3.Key}");
+                    counter++;
                 }
             }
+
+           
+            
 
         }
     }
