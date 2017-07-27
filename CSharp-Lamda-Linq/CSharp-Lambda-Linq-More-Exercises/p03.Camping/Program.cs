@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace п03.Camping
+namespace p03.Camping
 {
-    class Camping
+    class Program
     {
         static void Main(string[] args)
         {
             string input = Console.ReadLine();
-            Dictionary<string, Dictionary<string, int>> dataCamp = 
+            Dictionary<string, Dictionary<string, int>> dataCamp =
                                                     new Dictionary<string, Dictionary<string, int>>();
 
             while (input != "end")
@@ -37,7 +37,7 @@ namespace п03.Camping
                             .OrderByDescending(x => x.Value.Count)
                             .ThenBy(x => x.Key.Length);
 
-            
+
             foreach (var kvp in sortedData)
             {
                 Console.WriteLine($"{kvp.Key}: {kvp.Value.Count}");

@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("п03.Camping")]
+[assembly: AssemblyTitle("p05.LambadaExpressions")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("п03.Camping")]
+[assembly: AssemblyProduct("p05.LambadaExpressions")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("26063d42-11ee-42ec-9742-77bc8f7bd67d")]
+[assembly: Guid("b1d348fb-3957-4f6f-9dde-3b158220b250")]
 
 // Version information for an assembly consists of the following four values:
 //

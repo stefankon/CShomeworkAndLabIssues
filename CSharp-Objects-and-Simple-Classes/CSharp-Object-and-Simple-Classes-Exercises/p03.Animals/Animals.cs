@@ -11,78 +11,122 @@ namespace p03.Animals
         static void Main(string[] args)
         {
             string input = Console.ReadLine();
-            List<Characteristics> data = new List<Characteristics>();
-            Dictionary<string, string> talks = new Dictionary<string, string>();
+            var dogs = new Dictionary<string, Dog>();
+            var cats = new Dictionary<string, Cat>();
+            var snakes = new Dictionary<string, Snake>();
 
             while (input != "I'm your Huckleberry")
             {
                 string[] tokens = input
                                   .Split(' ')
                                   .ToArray();
-
-                if (tokens.Length > 2)
+                string type = tokens[0];
+                
+                if (type == "talk")
                 {
-                    string kind = tokens[0];
+                    string name = tokens[1];
+                    if (dogs.ContainsKey(name))
+                    {
+                        dogs[name].ProduceSound();
+                    }
+                    else if (cats.ContainsKey(name))
+                    {
+                        cats[name].ProduceSound();
+                    }
+                    else
+                    {
+                        snakes[name].ProduceSound();
+                    }
+                }
+                else
+                {
                     string name = tokens[1];
                     int age = int.Parse(tokens[2]);
-                    int individuality = int.Parse(tokens[2]);
+                    int parameters = int.Parse(tokens[3]);
 
-                    data.Add(new Characteristics(kind, name, age, individuality));
-                }
-                else //talk animal
-                {
-                    string talk = tokens[0];
-                    string animalName = tokens[1];
-                   
-                    if (!talks.ContainsKey(nameAnimal))
+                    if (type == "Dog")
                     {
-                        talks.Add(nameAnimal, talk);
+                        dogs.Add(name, new Dog(name, age, parameters));
+                    }
+                    else if (type == "Cat")
+                    {
+                        cats.Add(name, new Cat(name, age, parameters));
+                    }
+                    else // type == "Snake"
+                    {
+                        snakes.Add(name, new Snake(name, age, parameters));
                     }
                 }
+                input = Console.ReadLine();
             }
-            foreach (var pet in data)
+            foreach (var dog in dogs)
             {
-                string petKind = pet.Kind;
-                string petName = pet.Name;
-                int petAge = pet.Age;
-                int petIdividual = pet.Individuality;
+                Dog currDog = dog.Value;
+                Console.WriteLine($"Dog: {currDog.Name}, Age: {currDog.Age}, Number Of Legs: {currDog.NumberOfLegs}");
+            }
+            foreach (var cat in cats)
+            {
+                Cat currCat = cat.Value;
+                Console.WriteLine($"Cat: {currCat.Name}, Age: {currCat.Age}, IQ: {currCat.IntelligenceQontient}");
+            }
+            foreach (var snake in snakes)
+            {
+                Snake currSnake = snake.Value;
+                Console.WriteLine($"Snake: {currSnake.Name}, Age: {currSnake.Age}, Cruelty: {currSnake.CrueltyCoefficient}");
+            }
+        }
+        class Dog
+        {
+            public string Name { get; set; }
+            public int Age { get; set; }
+            public int NumberOfLegs { get; set; }
 
-                foreach (var kvp in talks)
-                {
-                    string currName = kvp.Key;
-                    if (true)
-                    {
+            public Dog(string name, int age, int numberOfLegs)
+            {
+                this.Name = name;
+                this.Age = age;
+                this.NumberOfLegs = numberOfLegs;
+            }
+            public void ProduceSound()
+            {
+                Console.WriteLine("I'm a Distinguishedog, and I will now produce a distinguished sound! Bau Bau.");
+            }
+        }
 
-                    }
+        class Cat
+        {
+            public string Name { get; set; }
+            public int Age { get; set; }
+            public int IntelligenceQontient { get; set; }
 
-                    switch (currAnimal)
-                    {
-                        case "Dog":
+            public Cat(string name, int age, int intelligenceQontient)
+            {
+                this.Name = name;
+                this.Age = age;
+                this.IntelligenceQontient = intelligenceQontient;
+            }
+            public void ProduceSound()
+            {
+                Console.WriteLine("I'm an Aristocat, and I will now produce an aristocratic sound! Myau Myau.");
+            }
 
-                   default:
-                            break;
-                    }
-                }
+        }
+        class Snake
+        {
+            public string Name { get; set; }
+            public int Age { get; set; }
+            public int CrueltyCoefficient { get; set; }
 
-               
-
+            public Snake(string name, int age, int crueltyCoefficient)
+            {
+                this.Name = name;
+                this.Age = age;
+                this.CrueltyCoefficient = crueltyCoefficient;
+            }
+            public void ProduceSound()
+            {
+                Console.WriteLine("I'm a Sophistisnake, and I will now produce a sophisticated sound! Honey, I’m home.");
             }
         }
     }
-    class Characteristics
-    {
-       public string Kind { get; set; }
-       public string Name { get; set; }
-       public int Age { get; set; }
-       public int Individuality { get; set; }
-
-        public Characteristics(string kind, string name, int age, int individuality)
-        {
-            this.Kind = kind;
-            this.Name = name;
-            this.Age = age;
-            this.Individuality = individuality;
-        }
-    }
-   
 }
