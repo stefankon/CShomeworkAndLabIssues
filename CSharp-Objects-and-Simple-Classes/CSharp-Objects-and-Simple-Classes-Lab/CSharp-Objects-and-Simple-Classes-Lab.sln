@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p01.DayOfWeek", "p01.DayOfW
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p02.RandomizeWords", "p02.RandomizeWords\p02.RandomizeWords.csproj", "{6DC31B22-7E67-4AB7-8AEA-CD569350EB0A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p04.DistancePoints", "p04.DistancePoints\p04.DistancePoints.csproj", "{AEEA6EA4-C457-42E9-8C79-B25AF6FE6740}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{6DC31B22-7E67-4AB7-8AEA-CD569350EB0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6DC31B22-7E67-4AB7-8AEA-CD569350EB0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6DC31B22-7E67-4AB7-8AEA-CD569350EB0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEEA6EA4-C457-42E9-8C79-B25AF6FE6740}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEEA6EA4-C457-42E9-8C79-B25AF6FE6740}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEEA6EA4-C457-42E9-8C79-B25AF6FE6740}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEEA6EA4-C457-42E9-8C79-B25AF6FE6740}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
