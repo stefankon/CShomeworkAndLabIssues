@@ -125,7 +125,7 @@ namespace p03.Animals
             }
             public void ProduceSound()
             {
-                Console.WriteLine("I'm a Sophistisnake, and I will now produce a sophisticated sound! Honey, I’m home.");
+                Console.WriteLine("I'm a Sophistisnake, and I will now produce a sophisticated sound! Honey, I'm home.");
             }
         }
     }

@@ -12,7 +12,6 @@ namespace p05.LambadaExpressions
         {
             string input = Console.ReadLine();
             Dictionary<string, Lambada> data = new Dictionary<string, Lambada>();
-            int counter = 1;
 
             while (input != "lambada")
             {
@@ -20,30 +19,39 @@ namespace p05.LambadaExpressions
                                     .Split(new string[] { " => ", "." },
                                            StringSplitOptions.RemoveEmptyEntries)
                                                    .ToArray();
-                string selector = tokens[0];
-                string selObj = "";
-                string property = "";
-                string secondSelector = "";
-               
+
+
                 List<string> selectorObject = new List<string>();
-                if (selector != "dance")
+                if (input != "dance")
                 {
-                    secondSelector = selector;
-                    property = tokens[2];
-                    selObj = tokens[1];
-                    selectorObject.Add(selObj);
-                    if (!data.ContainsKey(secondSelector))
+                    string selector = tokens[0];
+                    selectorObject.Add(tokens[1]);
+                    string property = tokens[2];
+
+                    if (!data.ContainsKey(selector))
                     {
-                        data.Add(secondSelector, new Lambada(secondSelector, selectorObject, property));
+                        data.Add(selector, new Lambada(selector, selectorObject, property));
+                    }
+
+                    if (data.ContainsKey(selector))
+                    {
+                        data[selector] = new Lambada(selector, selectorObject, property);
                     }
                 }
-                if (data.ContainsKey(secondSelector))
+
+                if (input == "dance")
                 {
-                    data[secondSelector] = new Lambada(secondSelector, selectorObject, property);
-                }
-                if (selector == "dance")
-                {
-                    counter++;
+                    foreach (var lambada in data)
+                    {
+                        var lm = lambada.Value;
+                        string selector = lm.Selector;
+                        var selectorObj = lm.SelectorObject;
+
+                        if (data.ContainsKey(selector))
+                        {
+                            selectorObj.Add(selector);
+                        }
+                    }
                 }
 
                 input = Console.ReadLine();
@@ -52,15 +60,15 @@ namespace p05.LambadaExpressions
             {
                 var currLambda = lmb.Value;
                 Console.Write($"{currLambda.Selector} => ");
-                for (int i = 0; i < counter; i++)
+                for (int i = 0; i < currLambda.SelectorObject.Count; i++)
                 {
-                    Console.Write($"{currLambda.SelectorObject[0]}.");
+                    Console.Write($"{currLambda.SelectorObject[i]}.");
                 }
                 Console.WriteLine(currLambda.Proterty);
             }
         }
     }
-  
+
     class Lambada
     {
         public string Selector { get; set; }

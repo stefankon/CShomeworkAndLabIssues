@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p03.Camping", "p03.Camping\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p05.LambadaExpressions", "p05.LambadaExpressions\p05.LambadaExpressions.csproj", "{B1D348FB-3957-4F6F-9DDE-3B158220B250}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p06.OrderedBankingSystem", "p06.OrderedBankingSystem\p06.OrderedBankingSystem.csproj", "{4A64F77C-9E62-4649-8557-05586C5C90D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p00.Tets", "p00.Tets\p00.Tets.csproj", "{14B34976-DBD0-49A8-91D7-20DC76F639D8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{B1D348FB-3957-4F6F-9DDE-3B158220B250}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B1D348FB-3957-4F6F-9DDE-3B158220B250}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B1D348FB-3957-4F6F-9DDE-3B158220B250}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A64F77C-9E62-4649-8557-05586C5C90D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A64F77C-9E62-4649-8557-05586C5C90D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A64F77C-9E62-4649-8557-05586C5C90D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A64F77C-9E62-4649-8557-05586C5C90D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14B34976-DBD0-49A8-91D7-20DC76F639D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14B34976-DBD0-49A8-91D7-20DC76F639D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14B34976-DBD0-49A8-91D7-20DC76F639D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14B34976-DBD0-49A8-91D7-20DC76F639D8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
