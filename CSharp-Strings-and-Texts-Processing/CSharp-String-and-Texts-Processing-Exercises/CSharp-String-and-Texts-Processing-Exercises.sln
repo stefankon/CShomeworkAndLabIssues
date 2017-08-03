@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p06.SentenceSplit", "p06.Se
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p07.CapitalizeWodrs", "p07.CapitalizeWodrs\p07.CapitalizeWodrs.csproj", "{08F5DCC4-E245-4C0C-B016-253EA349B738}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p00.Test", "p00.Test\p00.Test.csproj", "{1178425E-D34C-49DD-B7C9-4EA0B3400B33}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{08F5DCC4-E245-4C0C-B016-253EA349B738}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{08F5DCC4-E245-4C0C-B016-253EA349B738}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08F5DCC4-E245-4C0C-B016-253EA349B738}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1178425E-D34C-49DD-B7C9-4EA0B3400B33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1178425E-D34C-49DD-B7C9-4EA0B3400B33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1178425E-D34C-49DD-B7C9-4EA0B3400B33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1178425E-D34C-49DD-B7C9-4EA0B3400B33}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
